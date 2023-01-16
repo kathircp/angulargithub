@@ -25,6 +25,10 @@ steps:
 - task: CopyFiles@2
   inputs:
     targetFolder: '$(Build.ArtifactStagingDirectory)'
+- script: |
+    mkdir:'$(Build.ArtifactStagingDirectory)\\dist'
+    xcopy: 'dist\web-app' '$(Build.ArtifactStagingDirectory)\\dist' /E/H/C
+    displayName: 'Copy content'
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/dist'
+  inputs:   
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
