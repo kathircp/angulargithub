@@ -16,10 +16,7 @@ steps:
     - task: Npm@1
       inputs:
         command: 'install'    
-    - task: Npm@1
-      inputs:
-        command: 'custom'
-        customCommand: 'build --prod' 
+    
     - task: CopyFiles@2
       inputs:
         SourceFolder: './dist'
