@@ -15,12 +15,11 @@ steps:
       displayName: 'Install Node.js'
     - task: Npm@1
       inputs:
-        command: 'install'
+        command: 'install'    
     - task: Npm@1
       inputs:
         command: 'custom'
-        customCommand: 'run build --prod'
- 
+        customCommand: 'build --prod' 
     - task: CopyFiles@2
       inputs:
         SourceFolder: './dist'
