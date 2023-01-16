@@ -16,7 +16,7 @@ steps:
 
     - script: |
         npm install -g @angular/cli        
-        npm build --configuration --production
+        npm build
       displayName: 'npm install and build'
 
     - task: CopyFiles@2
