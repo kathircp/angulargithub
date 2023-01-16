@@ -15,12 +15,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |    
-    npm install -g @angular/cli
+- script: |        
     npm install    
   displayName: 'npm install'
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'npm run build --prod'
+    customCommand: 'run build'
   displayName: 'npm cache clean'
