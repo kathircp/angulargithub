@@ -22,5 +22,5 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'npm cache clean --force'
+    customCommand: 'npm run build --prod'
   displayName: 'npm cache clean'
