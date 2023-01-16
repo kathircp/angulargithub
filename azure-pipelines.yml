@@ -21,4 +21,4 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    customCommand: 'run build --prod'
+    customCommand: 'build --prod'
