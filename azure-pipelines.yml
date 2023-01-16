@@ -23,6 +23,3 @@ steps:
     command: 'custom'
     customCommand: 'build --prod'
 - task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: 'dist'
-    ArtifactName: 'drop'  
