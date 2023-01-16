@@ -26,7 +26,8 @@ steps:
   inputs:
     targetFolder: '$(Build.ArtifactStagingDirectory)'
 - script: |
-    mkdir -p "$(Build.ArtifactStagingDirectory)\\dist" && cp file "$(Build.ArtifactStagingDirectory)\\dist"    
+    mkdir -p "$(Build.ArtifactStagingDirectory)\\dist"  
+    cp file "$(Build.ArtifactStagingDirectory)\\dist"    
     displayName: 'Copy content'
 - task: PublishBuildArtifacts@1
   inputs:   
