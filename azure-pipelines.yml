@@ -13,12 +13,13 @@ steps:
       inputs:
         versionSpec: '16.x'
       displayName: 'Install Node.js'
-
-    - script: |
-        npm install        
-        npm build
-      displayName: 'npm install and build'
-
+    - task: Npm@1
+      inputs:
+        command: 'install'    
+    - task: Npm@1
+      inputs:
+        command: 'custom'
+        customCommand: 'build --prod' 
     - task: CopyFiles@2
       inputs:
         SourceFolder: './dist'
